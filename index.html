@@ -5,25 +5,18 @@
 	</title>	
 </head>
 <body>
-	<div id="tchat" style="display:none">
-		<div id="users" style="float:left">
-		</div>
-		<div id="messages" height="500px">
-			<table>
-			<div class="message" id="msgtpl">
-				<img src"{{{user.avatar}}}">
-				<div class="info">
-					
-						<tr>
-							<td><strong>{{user.username}}</strong></td>
-							<td>{{message}}</td>
-							<td><span class="date">{{h}}::{{m}} </spaan></td>
-						</tr>
-				</div>
+	<div id="users">
+	</div>
+	<div id="messages">
+		<div class="message" id="msgtpl">
+			<img src"{{{user.avatar}}}">
+			<div class="info">
+				<p><strong>{{user.username}}</strong></p>
+				<p>{{message}}</p>
+				<span class="date">{{h}}::{{m}}</spaan>
 			</div>
-			</table>
 		</div>
-	</div>	
+	</div>
 	
 	<div id="login">
 		<form action="" id="loginform">

@@ -1,3 +1,5 @@
+		$('#users').fadeOut();
+		$('#messages').fadeOut();
 (function($){
 	var socket = io.connect('http://localhost:1337');
 	var msgtpl = $('#msgtpl').html();
@@ -14,9 +16,10 @@
 	})
 
 	socket.on('logged',function(){
+		$('#users').fadeIn();
+		$('#messages').fadeIn();
 		$('#login').fadeOut();
 		$('#message').focus();
-		$('#tchat').fadeIn();
 	});
 	//envoi de message
 	$('form').submit(function(event){
