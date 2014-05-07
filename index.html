@@ -1,0 +1,48 @@
+<html>
+<head>
+	<title>
+		Tchat en Node JS
+	</title>	
+</head>
+<body>
+	<div id="tchat" style="display:none">
+		<div id="users" style="float:left">
+		</div>
+		<div id="messages" height="500px">
+			<table>
+			<div class="message" id="msgtpl">
+				<img src"{{{user.avatar}}}">
+				<div class="info">
+					
+						<tr>
+							<td><strong>{{user.username}}</strong></td>
+							<td>{{message}}</td>
+							<td><span class="date">{{h}}::{{m}} </spaan></td>
+						</tr>
+				</div>
+			</div>
+			</table>
+		</div>
+	</div>	
+	
+	<div id="login">
+		<form action="" id="loginform">
+			<h1>Bienvenue</h1>
+			<p>Ceci est u tchat avec Node.js, Entrez votre pseudo et votre	email</p>
+			<input type="text" name="login" id="username" placeholder="Nom d'utilistateur">
+			<input 	type="mail" name="mail" id="mail" placeholder="E-mail">
+			<input type="submit" vaue="Envoyer">
+		</form>
+	</div>
+
+	<form action="" id="form">
+		<input type="text" id="message" classe="text"/>
+		<input type="submit" id="send" value="Envoyer mon message !" classe="submit" />
+	</form>
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="js/mustache.js"></script>
+	<script src="http://localhost:1337/socket.io/socket.io.js"></script>
+	<script src="js/client.js"></script>
+</body>
+</html>	
